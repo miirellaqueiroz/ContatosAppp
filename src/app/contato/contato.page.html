@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>BACK</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+      <ion-card *ngIf="contato">
+      <img class="foto" [src]="contato.foto">
+        <ion-item>
+          <ion-card-header>
+            <ion-card-title>{{ contato.nome }}</ion-card-title>
+          </ion-card-header>
+        </ion-item>
+
+        <ion-item>
+          <ion-card-header>
+            <ion-card-title>{{ contato.id }}</ion-card-title>
+          </ion-card-header>
+        </ion-item>
+
+        <ion-item>
+          <ion-card-header>
+            <ion-card-title>{{ contato.email }}</ion-card-title>
+          </ion-card-header>
+        </ion-item>
+      </ion-card>
+
+</ion-content>

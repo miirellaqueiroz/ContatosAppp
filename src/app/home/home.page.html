@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Lista de Contatos</ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+  <ion-list [inset]="true">
+    <ion-item *ngFor="let contato of listaContatos" >
+      <ion-item button (click)="exibirContato(contato)">
+
+        <ion-avatar slot="start">
+          <img [src]="contato.foto">
+        </ion-avatar>
+
+      <ion-card-header>
+        <ion-card-title>{{contato.nome}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+      </ion-card-content>
+    </ion-item>
+    </ion-item>
+    </ion-list>
+
+</ion-content>
